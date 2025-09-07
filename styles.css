@@ -1,0 +1,361 @@
+
+@font-face {
+    font-family: poppins;
+    src: url(./fonts/Poppins-Regular.ttf);
+}
+
+@font-face {
+    font-family: comfortaa;
+    src: url(./fonts/Comfortaa-VariableFont_wght.ttf);
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+:root {
+    --bg: rgb(248, 218, 221);
+    --panel: #fefeff;
+    --text: #edf2ff;
+    --muted: #161b21;
+    --brand: #1b1f40;
+    --brand-dark: #0d071b;
+    --radius: 14px;
+    --space-1: .5rem;
+    --space-2: 1rem;
+    --space-3: 1.5rem;
+    --space-4: 2rem;
+    --space-6: 3rem;
+    --maxw: 1100px;
+}
+
+h2 {
+    font-family: poppins, arial;
+    text-align: center;
+    color: var(--text);
+}
+
+body{
+    margin: 0px;
+    font-family: comfortaa, arial;
+    color: var(--text);
+    background: linear-gradient(var(--brand), var(--brand-dark))
+}
+
+img {
+    max-width: 100%;
+    display: block; 
+    border-radius: var(--radius);
+}
+
+a {
+    color: rgb(124, 173, 224);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.container  {
+    max-width: var(--maxw);
+    margin: 0 auto;
+    padding: 0 var(--space-1);
+}
+
+.section {
+    padding: var(--space-6) 0;
+}
+
+.skip-link {
+    position: absolute;
+    left: -999px;
+    top: -999px;
+    background: #fff;
+    color: #000;
+    padding: .5rem 1rem;
+}
+
+.skip-link:focus {
+    left: var(--space-2);
+    top: var(--space-2);
+    z-index: 999;
+}
+
+
+/* Header & Nav */
+
+.site-header {
+    position: sticky;
+    top: 0;
+    backdrop-filter: blur(8px);
+    background: #0b0f2b79;
+    border-bottom: 1px solid #1f2937;
+}
+
+.site-header .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.2rem 2rem;
+}
+
+.logo {
+    font-family: poppins, arial;
+    font-size: 1.1rem;
+    margin: 0;
+    letter-spacing: .5px;
+    color: var(--text);
+}
+
+.nav {
+    list-style: none;
+    display: flex;
+    gap: var(--space-3);
+    margin: 0;
+    padding: 0;
+}
+
+.nav a {
+    padding: .4rem .6rem;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+    text-decoration: none;
+}
+
+.nav a:focus, .nav a:hover {
+    background:  #0d071b96;
+    text-decoration: none;
+    filter: brightness(1.1);
+    outline: 1px solid transparent;
+    transform: translateY(-2px);
+}
+
+
+/* Hero */
+
+.hero {
+    padding: calc(var(--space-6) + 10vh) 0 var(--space-6);
+    background: linear-gradient(to botto, rgba(34,211,238,.15), transparent 70%);
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 0.5rem;
+    align-items: center;
+    text-align: center;
+}
+
+#intro-title {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 700;
+    margin-bottom: 0.3rem;
+}
+
+.lead {
+    color: var(--text);
+    font-size: 1rem;
+    margin-top: .2rem;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    max-width: 44ch;
+}
+
+.profile {
+    text-align: center;
+}
+
+.profile img {
+    width: 300px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.profile figcaption {
+    color: var(--text);
+    font-size: .9rem;
+    margin-top: .5rem;
+    text-align: center;
+}
+
+
+/* about */
+
+#about {
+    background: white;
+    color: black;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+#about.container {
+    display: flex;
+    align-items: center;
+    padding: .8rem 1rem;
+    
+}
+
+#about p {
+    margin: 0.3rem 0;
+    line-height: 1.2;
+    max-width: 80ch;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#about-title {
+    color: #000;
+}
+
+/* Buttons */
+
+.btn {
+    display: inline-block;
+    padding: .7rem 1rem;
+    border-radius: 999px;
+    background: linear-gradient(90deg, powderblue, rgb(156, 156, 245));
+    color: #001018;
+    font-weight: 600;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+    filter: brightness(1.1);
+    text-decoration: none;
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 5px 10px rgba(166, 209, 254, 0.126);
+}
+
+.btn-outline {
+    border: 1px solid #7da5dc;
+    background: var(--brand);
+    color: var(--text);
+}
+
+.btn-outline:hover {
+    background: rgba(34,211,238,.08);
+    color: black;
+}
+
+/* Card */
+
+.cards {
+    display: flex;
+    flex-direction: column;
+    grid-template-columns: repeat(auto-fit, minmax(700px, 1fr));
+    gap: var(--space-3);
+    align-items: stretch;
+}
+
+
+.card {
+    background-color: #fefeff;
+    border: 1px solid #1f2937;
+    border-radius: var(--radius);
+    overflow: hidden;
+    display: flex;
+    padding: 1rem;
+    gap: 1rem;
+    flex-direction: row;
+    max-width: 100%;
+    margin: 0 auto;
+    transition: all 0.3s ease-in-out;
+}
+
+.card img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: var(--radius);
+    transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.card-body {
+    padding: var(--space-2);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
+}
+
+.card h3 {
+    margin: .2rem 0;
+    font-family: poppins;
+    text-align: center;
+    color: #000;
+}
+
+.card-body a {
+    margin-top: auto;
+    align-self: center;
+    width: 10rem;
+}
+
+.card p {
+    color: var(--muted);
+    text-align: center;
+    font-family: comfortaa;
+    margin: 0.2rem auto;
+    line-height: 1.2;
+    font-size: 0.9rem;
+    max-width: 50ch;
+
+}
+
+.card:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 10px 20px rgba(166, 209, 254, 0.226);
+}
+
+/* Chips */
+
+.chips {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: .6rem;
+    justify-content: center;
+}
+
+.chips li {
+    padding: .45rem .7rem;
+    background: #0b1220;
+    border: 1px solid #7da5dc;
+    border-radius: 999px;
+    color: #94a3b8;
+}
+
+
+/*Contact*/
+
+#contact address {
+    text-align: center;
+    font-style: normal;
+    line-height: 1.6;
+}
+
+
+/* Footer */
+
+.site-footer {
+    text-align: center;
+    color: rgb(159, 170, 182);
+    padding: var(--space-4) var(--space-2);
+    border-top: 1px solid #1f2937;
+}
+
+
+/* Responsive tweaks */
+
+@media (max-width: 900px) {
+    .hero-grid {grid-template-columns: 1fr;}
+    .cards {grid-template-columns: 1fr 1fr;}
+}
+
+@media (max-width: 560px) {
+    .cards {grid-template-columns: 1fr;}
+}

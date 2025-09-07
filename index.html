@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sacha's Portfolio</title>
+    <link rel="stylesheet" href="styles.css" />
+    </head>
+<body>
+    <a class="skip-link" href="#content"> Skip to content</a>
+    <header class="site-header">
+        <div class="container">
+            <h1 class="logo">Sacha</h1>
+            <nav aria-label="Primary">
+                <ul class="nav">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Project</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="content">
+
+        <section class="hero" aria-labelledby="intro-title">
+            <div class="container">
+                <div class="hero-grid">
+                    <figure class="profile">
+                        <img src="img/myphoto.png" alt="My profile" />
+                        <figcaption>Based in Butuan City, PH</figcaption>
+                    </figure>
+                    <div>
+                        <h2 id="intro-title"> Hi, I'm Sacha</h2>
+                        <p class="lead"> I build simple, human-friendly web experiences.
+                            I also do graphic designing and digital arts.
+                        </p>
+                        <a class="btn" href="#projects">See my work</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="section" aria-labelledby="about-title">
+            <div class="container">
+                <h2 id="about-title">About</h2>
+                <p>I am a beginner web developer focused on clean, accessible interfaces. I enjoy CSS layout, semantic HTML, and learning by building.
+                    I'm currently exploring <strong>HTML/CSS</strong> fundamentals and crafting small projects. I am also a graphic designer and a digital artist.
+                    You can reach me on <a id="email" href="#contact">email.</a>
+                </p>
+            </div>
+        </section>
+
+        <section id="projects" class="section" aria-labelledby="projects-title">
+            <div class="container">
+                <h2 id="projects-title">Projects</h2>
+                <div class="cards">
+
+                    <article class="card">
+                        <img src="img/projA.jpg" alt="Picture of my first project"/>
+                        <div class="card-body">
+                            <h3>Project A</h3>
+                            <p>A simple but functional landing page built entirely with HTML and CSS, focusing on clean layout and responsive design.</p>
+                            <a class="btn btn-outline" href="img/projA.jpg" target="_blank" rel="noopener">View</a>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <img src="img/projB.jpg" alt="Graphic Design"/>
+                        <div class="card-body">
+                            <h3>Project B</h3>
+                            <p>A simple creative poster and layout design that I made for our Art Gallery event for our Understanding Culture, Society, and Politics.  </p>
+                            <a class="btn btn-outline" href="img/projB.jpg" target="_blank" rel="noopener">View</a>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <img src="img/projC.png" alt="Digital Art"/>
+                        <div class="card-body">
+                            <h3>Project C</h3>
+                            <p> A commissioned digital illustration in chibi style, created during my early exploration and experimentation with digital art.</p>
+                            <a class="btn btn-outline" href="img/projC.png" target="_blank" rel="noopener">View</a>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="section" aria-labelledby="skills-title">
+            <div class="container">
+                <h2 id="skills-title">Skills</h2>
+                <ul class="chips" role="list">
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>Responsive Design</li>
+                    <li>Accessibility</li>
+                    <li>Graphic Design</li>
+                    <li>Digital Arts</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="contact" class="section" aria-labelledby="contact-title">
+            <div class="container">
+                <h2 id="contact-title">Contact</h2>
+                <address> 
+                    Email: <a href="mailto:smaejaban@gmail.com">smaejaban@gmail.com</a><br />
+                    Location: Butuan City, Philippines
+                </address>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        © <span id="year">2025</span> Sacha Mae C. Jaban · Built with HTML AND CSS
+    </footer>
+</body>
+</html>
